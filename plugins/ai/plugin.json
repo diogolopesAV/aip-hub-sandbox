@@ -3,7 +3,7 @@
   "description": "Common useful AI skills bundle (synthetic).",
   "version": "1.0.0",
   "author": {
-    "name": "Sandbox Platform Team"
+    "name": "manifest-author-AI@example.com"
   },
   "license": "MIT",
   "skills": "./skills/"
