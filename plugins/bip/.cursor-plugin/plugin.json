@@ -1,0 +1,11 @@
+{
+  "name": "bip",
+  "displayName": "Bip",
+  "version": "1.0.0",
+  "description": "Coding standards skills (synthetic).",
+  "author": {
+    "name": "Sandbox Platform Team"
+  },
+  "license": "MIT",
+  "skills": "./skills/"
+}

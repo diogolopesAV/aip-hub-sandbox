@@ -1,0 +1,15 @@
+{
+  "name": "sbx-java-service",
+  "version": "1.0.0",
+  "description": "Java service development skills with hooks and an MCP server (synthetic).",
+  "author": {
+    "name": "Sandbox Platform Team"
+  },
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Java Service",
+    "shortDescription": "Java service development skills with hooks and an MCP server (synthetic).",
+    "category": "Developer Tools"
+  }
+}

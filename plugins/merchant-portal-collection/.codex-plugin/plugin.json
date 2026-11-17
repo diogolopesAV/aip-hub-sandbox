@@ -1,0 +1,15 @@
+{
+  "name": "merchant-portal-collection",
+  "version": "1.0.0",
+  "description": "Portal skills collection (synthetic).",
+  "author": {
+    "name": "Sandbox Platform Team"
+  },
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Merchant Portal Collection",
+    "shortDescription": "Portal skills collection (synthetic).",
+    "category": "Developer Tools"
+  }
+}

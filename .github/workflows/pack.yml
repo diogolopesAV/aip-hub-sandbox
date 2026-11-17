@@ -1,0 +1,56 @@
+name: Pack marketplace
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - apm.yml
+      - plugins/**
+      - scripts/**
+  workflow_dispatch:
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+
+      - uses: microsoft/apm-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          apm-version: '0.27.0'
+        env:
+          GITHUB_APM_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pack central marketplace (Claude + Codex outputs)
+        run: apm pack
+        env:
+          GITHUB_APM_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate Copilot CLI and Cursor marketplace catalogs
+        # apm pack does not support Copilot CLI or Cursor output — this script fills the gap.
+        run: |
+          pip install pyyaml --quiet
+          python scripts/gen-copilot-marketplace.py
+          python scripts/gen-copilot-marketplace.py --format cursor
+
+      - name: Normalize git-subdir URLs (GitHub shorthand → HTTPS)
+        run: python scripts/normalize-marketplace-urls.py
+
+      - name: Commit generated pack outputs
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
+          git add \
+            .claude-plugin/marketplace.json \
+            .claude-plugin/plugin.json \
+            .github/plugin/plugin.json \
+            .github/plugin/marketplace.json \
+            .agents/plugins/marketplace.json \
+            .cursor-plugin/marketplace.json
+          git diff --staged --quiet || git commit -m "chore: regenerate pack outputs [skip ci]"
+          git push

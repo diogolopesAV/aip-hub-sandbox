@@ -1,0 +1,40 @@
+name: Validate PR
+
+on:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: microsoft/apm-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          apm-version: '0.27.0'
+          # PRs must validate the files checked out from the PR.
+          # Do not run "apm install" against the default branch here.
+          setup-only: 'true'
+
+      - name: Validate central marketplace (Claude + Codex outputs)
+        # --dry-run validates the PR's local marketplace without writing files.
+        # --check-clean is intentionally omitted: pack.yml post-processes
+        # .claude-plugin/marketplace.json to expand GitHub shorthand URLs
+        # (owner/repo → https://github.com/owner/repo) so the committed file
+        # will always differ from raw apm pack output by design.
+        run: apm pack --dry-run
+
+      - name: Validate local plugin layouts
+        run: |
+          pip install pyyaml --quiet
+          python scripts/validate-plugins.py
+
+      - name: Validate marketplace catalog generation (Copilot CLI + Cursor)
+        # Validates catalogs generated from apm.yml without requiring committed
+        # marketplace JSON to be in sync. pack.yml regenerates those on merge.
+        run: |
+          pip install pyyaml --quiet
+          python scripts/gen-copilot-marketplace.py --validate-only
+          python scripts/gen-copilot-marketplace.py --format cursor --validate-only

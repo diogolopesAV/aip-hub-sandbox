@@ -1,0 +1,11 @@
+{
+  "name": "sbx-java-service",
+  "displayName": "Java Service",
+  "version": "1.0.0",
+  "description": "Java service development skills with hooks and an MCP server (synthetic).",
+  "author": {
+    "name": "Sandbox Platform Team"
+  },
+  "license": "MIT",
+  "skills": "./skills/"
+}

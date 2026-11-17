@@ -1,0 +1,15 @@
+{
+  "name": "migration",
+  "version": "1.0.0",
+  "description": "Infrastructure migration guidelines (synthetic).",
+  "author": {
+    "name": "Sandbox Platform Team"
+  },
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Migration",
+    "shortDescription": "Infrastructure migration guidelines (synthetic).",
+    "category": "Developer Tools"
+  }
+}

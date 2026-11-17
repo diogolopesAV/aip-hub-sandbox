@@ -1,0 +1,11 @@
+{
+  "name": "ai",
+  "displayName": "Ai",
+  "version": "1.0.0",
+  "description": "Common useful AI skills bundle (synthetic).",
+  "author": {
+    "name": "Sandbox Platform Team"
+  },
+  "license": "MIT",
+  "skills": "./skills/"
+}

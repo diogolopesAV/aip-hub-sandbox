@@ -1,0 +1,96 @@
+name: aip-hub-sandbox
+version: 1.0.0
+description: Sandbox AI package hub mirroring the structure of a real catalog (synthetic content)
+license: MIT
+targets:
+  - claude
+  - cursor
+  - codex
+  - copilot
+marketplace:
+  name: sbx-hub
+  owner:
+    name: Sandbox Platform Team
+    url: https://github.com/diogolopesAV
+  outputs:
+    claude: {}
+    codex: {}
+  packages:
+    - name: ai
+      source: ./plugins/ai
+      category: AI
+      description: Common useful AI skills bundle.
+      tags:
+        - ai
+        - skills
+    - name: design-system
+      source: ./plugins/design-system
+      category: Frontend
+      description: Frontend accessibility and styling guidelines.
+      tags:
+        - frontend
+        - css
+        - web accessibility
+    - name: development
+      source: ./plugins/development
+      category: Development
+      description: Compliant development guidelines.
+      tags:
+        - dev
+    - name: migration
+      source: ./plugins/migration
+      category: Infrastructure
+      description: Infrastructure migration guidelines.
+      tags:
+        - terraform
+        - iac
+    - name: bip
+      source: ./plugins/bip
+      category: Infrastructure
+      description: Coding standards skills.
+      tags:
+        - bip
+        - python
+        - terraform
+        - iac
+        - skill
+    - name: merchant-portal-collection
+      source: ./plugins/merchant-portal-collection
+      category: Frontend
+      description: Portal skills collection (phase 1 scaffold).
+      tags:
+        - portal
+        - skills
+    - name: sbx-java-service
+      source: ./plugins/sbx-java-service
+      category: Java, AI
+      description: A collection of skills for developing a Java service.
+      tags:
+        - java
+        - testing
+    - name: sandbox-readiness-plugin
+      source: diogolopesAV/aip-hub-sandbox-external
+      ref: 90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca
+      category: AI
+      description: Evaluate how ready a codebase is for AI development.
+      tags:
+        - ai-readiness
+        - coding
+        - agents
+    - name: sandbox-brand-plugin
+      source: diogolopesAV/aip-hub-sandbox-external
+      subdir: plugins/sandbox-brand-plugin
+      ref: 90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca
+      category: Design
+      description: Brand guidance for AI agents working on UI, copy and diagrams.
+dependencies:
+  apm:
+    - diogolopesAV/aip-hub-sandbox/plugins/ai
+    - diogolopesAV/aip-hub-sandbox/plugins/design-system
+    - diogolopesAV/aip-hub-sandbox/plugins/development
+    - diogolopesAV/aip-hub-sandbox/plugins/migration
+    - diogolopesAV/aip-hub-sandbox/plugins/bip
+    - diogolopesAV/aip-hub-sandbox/plugins/merchant-portal-collection
+    - diogolopesAV/aip-hub-sandbox/plugins/sbx-java-service
+    - diogolopesAV/aip-hub-sandbox-external#90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca
+    - diogolopesAV/aip-hub-sandbox-external/plugins/sandbox-brand-plugin#90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca

@@ -1,0 +1,11 @@
+{
+  "name": "development",
+  "displayName": "Development",
+  "version": "1.0.0",
+  "description": "Compliant development guidelines (synthetic).",
+  "author": {
+    "name": "Sandbox Platform Team"
+  },
+  "license": "MIT",
+  "skills": "./skills/"
+}

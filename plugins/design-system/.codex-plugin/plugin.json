@@ -1,0 +1,15 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "description": "Frontend accessibility and styling guidelines (synthetic).",
+  "author": {
+    "name": "Sandbox Platform Team"
+  },
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Design System",
+    "shortDescription": "Frontend accessibility and styling guidelines (synthetic).",
+    "category": "Developer Tools"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "migration",
+  "displayName": "Migration",
+  "version": "1.0.0",
+  "description": "Infrastructure migration guidelines (synthetic).",
+  "author": {
+    "name": "Sandbox Platform Team"
+  },
+  "license": "MIT",
+  "skills": "./skills/"
+}
