@@ -35,6 +35,16 @@ SKILL_NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 SKILL_NAME_MAX = 64
 SKILL_DESCRIPTION_MAX = 1024
 
+APM_YML = Path("apm.yml")
+TAXONOMY_YML = Path("taxonomy.yml")
+BU_PREFIX = "bu:"
+COMPANY_WIDE = "company-wide"
+EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+FREE_TAG_RE = re.compile(r"^[a-z0-9][a-z0-9 -]*$")
+MAX_FREE_TAGS = 5
+# Classification belongs to the plugin; a skill inherits it and must not carry its own.
+SKILL_FORBIDDEN_METADATA = ("category", "author", "bu", "business-unit")
+
 
 def load_json(path: Path) -> dict | None:
     try:
@@ -98,6 +108,9 @@ def validate_skill_md(skill_md: Path, errors: list[str]) -> None:
     if not isinstance(metadata, dict):
         errors.append(f"{skill_md}: 'metadata' must be a map of string to string")
         return
+    for key in SKILL_FORBIDDEN_METADATA:
+        if key in metadata:
+            errors.append(f"{skill_md}: metadata.{key} not allowed; a skill inherits classification from its plugin")
     for key, value in metadata.items():
         if not isinstance(value, str):
             errors.append(
@@ -148,6 +161,62 @@ def validate_plugin(plugin_dir: Path) -> list[str]:
     return errors
 
 
+def validate_catalog() -> list[str]:
+    """Validate classification of every apm.yml marketplace entry (hub and external) against taxonomy.yml."""
+    errors: list[str] = []
+    try:
+        taxonomy = yaml.safe_load(TAXONOMY_YML.read_text(encoding="utf-8")) or {}
+        catalog = yaml.safe_load(APM_YML.read_text(encoding="utf-8")) or {}
+    except (OSError, yaml.YAMLError) as exc:
+        return [f"cannot read {TAXONOMY_YML} or {APM_YML}: {exc}"]
+
+    areas = {str(a) for a in taxonomy.get("functional_areas") or []}
+    units = {str(u.get("key")) for u in taxonomy.get("business_units") or [] if isinstance(u, dict)}
+    packages = (catalog.get("marketplace") or {}).get("packages") or []
+
+    for pkg in packages:
+        name = str(pkg.get("name"))
+        where = f"apm.yml package {name!r}"
+
+        if pkg.get("category") not in areas:
+            errors.append(f"{where}: category {pkg.get('category')!r} is not in taxonomy functional_areas {sorted(areas)}")
+
+        tags = [str(t) for t in pkg.get("tags") or []]
+        bu_keys = [t[len(BU_PREFIX):] for t in tags if t.startswith(BU_PREFIX)]
+        other_prefixed = [t for t in tags if ":" in t and not t.startswith(BU_PREFIX)]
+        free_tags = [t for t in tags if ":" not in t]
+        if not bu_keys:
+            errors.append(f"{where}: needs at least one '{BU_PREFIX}<key>' tag (use '{BU_PREFIX}{COMPANY_WIDE}' for company-wide)")
+        for key in bu_keys:
+            if key not in units:
+                errors.append(f"{where}: unknown business unit {BU_PREFIX}{key} (allowed: {sorted(units)})")
+        if COMPANY_WIDE in bu_keys and len(bu_keys) > 1:
+            errors.append(f"{where}: '{BU_PREFIX}{COMPANY_WIDE}' cannot be combined with other business units")
+        for tag in other_prefixed:
+            errors.append(f"{where}: tag {tag!r} uses a reserved prefix (only '{BU_PREFIX}' is allowed)")
+        if len(free_tags) > MAX_FREE_TAGS:
+            errors.append(f"{where}: {len(free_tags)} search tags, max is {MAX_FREE_TAGS}")
+        for tag in free_tags:
+            if not FREE_TAG_RE.match(tag):
+                errors.append(f"{where}: search tag {tag!r} must be lowercase letters, digits, spaces or hyphens")
+
+        author = pkg.get("author")
+        if not isinstance(author, str) or not EMAIL_RE.match(author):
+            errors.append(f"{where}: author must be a team email address string, got {author!r}")
+            continue
+
+        source = str(pkg.get("source", ""))
+        if source.startswith("./"):
+            for rel in REQUIRED_MANIFESTS:
+                manifest = Path(source) / rel
+                data = load_json(manifest) if manifest.is_file() else None
+                m_author = (data or {}).get("author") or {}
+                if m_author.get("name") != author or m_author.get("email", author) != author:
+                    errors.append(f"{manifest}: author must be name={author!r} (and email, if set) to match apm.yml")
+
+    return errors
+
+
 def main() -> int:
     if not PLUGINS_DIR.is_dir():
         print("error: plugins/ not found — run from the repository root", file=sys.stderr)
@@ -161,6 +230,7 @@ def main() -> int:
     all_errors: list[str] = []
     for plugin_dir in plugin_dirs:
         all_errors.extend(validate_plugin(plugin_dir))
+    all_errors.extend(validate_catalog())
 
     if all_errors:
         print("Plugin validation failed:", file=sys.stderr)

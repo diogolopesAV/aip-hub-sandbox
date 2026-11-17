@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Frontend accessibility and styling guidelines (synthetic).",
   "author": {
-    "name": "manifest-author-DESIGN@example.com"
+    "name": "platform-team@example.com",
+    "email": "platform-team@example.com"
   },
   "license": "MIT",
   "skills": "./skills/",

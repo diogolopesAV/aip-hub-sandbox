@@ -1,0 +1,21 @@
+# Central vocabulary for catalog classification. AIP owns this file; changes are reviewed PRs.
+# CI validates apm.yml against it. The platform reads it to build pickers and filters.
+# Classification never grants or revokes access.
+
+functional_areas:
+  - General
+  - Engineering
+  - Product / Planning
+  - Marketing
+  - Sales / Account
+  - HR / People
+
+# Applicability of a plugin, written on its apm.yml entry as a "bu:<key>" tag.
+# "company-wide" is explicit and cannot be combined with named units.
+business_units:
+  - {key: company-wide, label: Company-wide}
+  - {key: payments, label: Payments}
+  - {key: collections, label: Collections}
+  - {key: accounting, label: Accounting}
+  - {key: risk, label: Risk}
+  - {key: data, label: Data}

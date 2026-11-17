@@ -18,10 +18,8 @@ marketplace:
   packages:
     - name: ai
       source: ./plugins/ai
-      category: Engineering
-      author:
-        name: team-ai@example.com
-        email: team-ai@example.com
+      category: General
+      author: platform-team@example.com
       description: Common useful AI skills bundle.
       tags:
         - "bu:company-wide"
@@ -30,34 +28,39 @@ marketplace:
     - name: design-system
       source: ./plugins/design-system
       category: Product / Planning
-      author:
-        name: team-design-system@example.com
-        email: team-design-system@example.com
+      author: platform-team@example.com
       description: Frontend accessibility and styling guidelines.
       tags:
-        - "bu:collection"
-        - "bu:pay-credit"
+        - "bu:payments"
+        - "bu:collections"
         - frontend
         - css
         - web accessibility
     - name: development
       source: ./plugins/development
-      category: Development
+      category: Engineering
+      author: platform-team@example.com
       description: Compliant development guidelines.
       tags:
+        - "bu:company-wide"
         - dev
     - name: migration
       source: ./plugins/migration
-      category: Infrastructure
+      category: Engineering
+      author: platform-team@example.com
       description: Infrastructure migration guidelines.
       tags:
+        - "bu:payments"
         - terraform
         - iac
     - name: bip
       source: ./plugins/bip
-      category: Infrastructure
+      category: Engineering
+      author: platform-team@example.com
       description: Coding standards skills.
       tags:
+        - "bu:payments"
+        - "bu:risk"
         - bip
         - python
         - terraform
@@ -66,27 +69,29 @@ marketplace:
     - name: merchant-portal-collection
       source: ./plugins/merchant-portal-collection
       category: Sales / Account
-      author:
-        name: team-merchant-portal-collection@example.com
-        email: team-merchant-portal-collection@example.com
+      author: platform-team@example.com
       description: Portal skills collection (phase 1 scaffold).
       tags:
-        - "bu:pay-credit"
+        - "bu:payments"
         - portal
         - skills
     - name: sbx-java-service
       source: ./plugins/sbx-java-service
-      category: Java, AI
+      category: Engineering
+      author: platform-team@example.com
       description: A collection of skills for developing a Java service.
       tags:
+        - "bu:collections"
         - java
         - testing
     - name: sandbox-readiness-plugin
       source: diogolopesAV/aip-hub-sandbox-external
       ref: 90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca
-      category: AI
+      category: Engineering
+      author: readiness-team@example.com
       description: Evaluate how ready a codebase is for AI development.
       tags:
+        - "bu:company-wide"
         - ai-readiness
         - coding
         - agents
@@ -95,13 +100,11 @@ marketplace:
       subdir: plugins/sandbox-brand-plugin
       ref: 90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca
       category: Marketing
-      author:
-        name: team-sandbox-brand-plugin@example.com
-        email: team-sandbox-brand-plugin@example.com
-      tags:
-        - brand
-        - "bu:pay-credit"
+      author: brand-team@example.com
       description: Brand guidance for AI agents working on UI, copy and diagrams.
+      tags:
+        - "bu:company-wide"
+        - brand
 dependencies:
   apm:
     - diogolopesAV/aip-hub-sandbox/plugins/ai

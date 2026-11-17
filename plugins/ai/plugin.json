@@ -3,7 +3,8 @@
   "description": "Common useful AI skills bundle (synthetic).",
   "version": "1.0.0",
   "author": {
-    "name": "manifest-author-AI@example.com"
+    "name": "platform-team@example.com",
+    "email": "platform-team@example.com"
   },
   "license": "MIT",
   "skills": "./skills/"

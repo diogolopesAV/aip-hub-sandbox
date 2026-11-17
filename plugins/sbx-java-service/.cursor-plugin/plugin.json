@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "Java service development skills with hooks and an MCP server (synthetic).",
   "author": {
-    "name": "Sandbox Platform Team"
+    "name": "platform-team@example.com",
+    "email": "platform-team@example.com"
   },
   "license": "MIT",
   "skills": "./skills/"

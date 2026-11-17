@@ -118,7 +118,7 @@ def build_plugin_entry(pkg: dict, fmt: str = "copilot") -> dict:
         entry["license"] = pkg["license"]
     # spike: emit author where the format documents it on marketplace entries (Copilot yes; Cursor schema does not list it)
     if "author" in pkg and fmt == "copilot":
-        entry["author"] = pkg["author"]
+        entry["author"] = {"name": pkg["author"], "email": pkg["author"]}
     if "category" in pkg:
         entry["category"] = pkg["category"]
 

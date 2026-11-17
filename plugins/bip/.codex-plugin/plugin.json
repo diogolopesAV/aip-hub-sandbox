@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Coding standards skills (synthetic).",
   "author": {
-    "name": "Sandbox Platform Team"
+    "name": "platform-team@example.com",
+    "email": "platform-team@example.com"
   },
   "license": "MIT",
   "skills": "./skills/",

@@ -3,7 +3,8 @@
   "description": "Infrastructure migration guidelines (synthetic).",
   "version": "1.0.0",
   "author": {
-    "name": "Sandbox Platform Team"
+    "name": "platform-team@example.com",
+    "email": "platform-team@example.com"
   },
   "license": "MIT",
   "skills": "./skills/"
