@@ -13,10 +13,10 @@
       "source": "plugins/ai",
       "description": "Common useful AI skills bundle.",
       "author": {
-        "name": "team-ai@example.com",
-        "email": "team-ai@example.com"
+        "name": "platform-team@example.com",
+        "email": "platform-team@example.com"
       },
-      "category": "Engineering",
+      "category": "General",
       "keywords": [
         "bu:company-wide",
         "ai",
@@ -28,13 +28,13 @@
       "source": "plugins/design-system",
       "description": "Frontend accessibility and styling guidelines.",
       "author": {
-        "name": "team-design-system@example.com",
-        "email": "team-design-system@example.com"
+        "name": "platform-team@example.com",
+        "email": "platform-team@example.com"
       },
       "category": "Product / Planning",
       "keywords": [
-        "bu:collection",
-        "bu:pay-credit",
+        "bu:payments",
+        "bu:collections",
         "frontend",
         "css",
         "web accessibility"
@@ -44,8 +44,13 @@
       "name": "development",
       "source": "plugins/development",
       "description": "Compliant development guidelines.",
-      "category": "Development",
+      "author": {
+        "name": "platform-team@example.com",
+        "email": "platform-team@example.com"
+      },
+      "category": "Engineering",
       "keywords": [
+        "bu:company-wide",
         "dev"
       ]
     },
@@ -53,8 +58,13 @@
       "name": "migration",
       "source": "plugins/migration",
       "description": "Infrastructure migration guidelines.",
-      "category": "Infrastructure",
+      "author": {
+        "name": "platform-team@example.com",
+        "email": "platform-team@example.com"
+      },
+      "category": "Engineering",
       "keywords": [
+        "bu:payments",
         "terraform",
         "iac"
       ]
@@ -63,8 +73,14 @@
       "name": "bip",
       "source": "plugins/bip",
       "description": "Coding standards skills.",
-      "category": "Infrastructure",
+      "author": {
+        "name": "platform-team@example.com",
+        "email": "platform-team@example.com"
+      },
+      "category": "Engineering",
       "keywords": [
+        "bu:payments",
+        "bu:risk",
         "bip",
         "python",
         "terraform",
@@ -77,12 +93,12 @@
       "source": "plugins/merchant-portal-collection",
       "description": "Portal skills collection (phase 1 scaffold).",
       "author": {
-        "name": "team-merchant-portal-collection@example.com",
-        "email": "team-merchant-portal-collection@example.com"
+        "name": "platform-team@example.com",
+        "email": "platform-team@example.com"
       },
       "category": "Sales / Account",
       "keywords": [
-        "bu:pay-credit",
+        "bu:payments",
         "portal",
         "skills"
       ]
@@ -91,8 +107,13 @@
       "name": "sbx-java-service",
       "source": "plugins/sbx-java-service",
       "description": "A collection of skills for developing a Java service.",
-      "category": "Java, AI",
+      "author": {
+        "name": "platform-team@example.com",
+        "email": "platform-team@example.com"
+      },
+      "category": "Engineering",
       "keywords": [
+        "bu:collections",
         "java",
         "testing"
       ]
@@ -106,8 +127,13 @@
         "ref": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca"
       },
       "description": "Evaluate how ready a codebase is for AI development.",
-      "category": "AI",
+      "author": {
+        "name": "readiness-team@example.com",
+        "email": "readiness-team@example.com"
+      },
+      "category": "Engineering",
       "keywords": [
+        "bu:company-wide",
         "ai-readiness",
         "coding",
         "agents"
@@ -124,13 +150,13 @@
       },
       "description": "Brand guidance for AI agents working on UI, copy and diagrams.",
       "author": {
-        "name": "team-sandbox-brand-plugin@example.com",
-        "email": "team-sandbox-brand-plugin@example.com"
+        "name": "brand-team@example.com",
+        "email": "brand-team@example.com"
       },
       "category": "Marketing",
       "keywords": [
-        "brand",
-        "bu:pay-credit"
+        "bu:company-wide",
+        "brand"
       ]
     }
   ]

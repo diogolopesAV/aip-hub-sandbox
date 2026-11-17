@@ -9,27 +9,25 @@
       "name": "ai",
       "description": "Common useful AI skills bundle.",
       "author": {
-        "name": "team-ai@example.com",
-        "email": "team-ai@example.com"
+        "name": "platform-team@example.com"
       },
       "tags": [
         "bu:company-wide",
         "ai",
         "skills"
       ],
-      "category": "Engineering",
+      "category": "General",
       "source": "./plugins/ai"
     },
     {
       "name": "design-system",
       "description": "Frontend accessibility and styling guidelines.",
       "author": {
-        "name": "team-design-system@example.com",
-        "email": "team-design-system@example.com"
+        "name": "platform-team@example.com"
       },
       "tags": [
-        "bu:collection",
-        "bu:pay-credit",
+        "bu:payments",
+        "bu:collections",
         "frontend",
         "css",
         "web accessibility"
@@ -40,44 +38,56 @@
     {
       "name": "development",
       "description": "Compliant development guidelines.",
+      "author": {
+        "name": "platform-team@example.com"
+      },
       "tags": [
+        "bu:company-wide",
         "dev"
       ],
-      "category": "Development",
+      "category": "Engineering",
       "source": "./plugins/development"
     },
     {
       "name": "migration",
       "description": "Infrastructure migration guidelines.",
+      "author": {
+        "name": "platform-team@example.com"
+      },
       "tags": [
+        "bu:payments",
         "terraform",
         "iac"
       ],
-      "category": "Infrastructure",
+      "category": "Engineering",
       "source": "./plugins/migration"
     },
     {
       "name": "bip",
       "description": "Coding standards skills.",
+      "author": {
+        "name": "platform-team@example.com"
+      },
       "tags": [
+        "bu:payments",
+        "bu:risk",
         "bip",
         "python",
         "terraform",
         "iac",
         "skill"
       ],
-      "category": "Infrastructure",
+      "category": "Engineering",
       "source": "./plugins/bip"
     },
     {
       "name": "merchant-portal-collection",
       "description": "Portal skills collection (phase 1 scaffold).",
       "author": {
-        "name": "team-merchant-portal-collection@example.com",
-        "email": "team-merchant-portal-collection@example.com"
+        "name": "platform-team@example.com"
       },
       "tags": [
-        "bu:pay-credit",
+        "bu:payments",
         "portal",
         "skills"
       ],
@@ -87,22 +97,30 @@
     {
       "name": "sbx-java-service",
       "description": "A collection of skills for developing a Java service.",
+      "author": {
+        "name": "platform-team@example.com"
+      },
       "tags": [
+        "bu:collections",
         "java",
         "testing"
       ],
-      "category": "Java, AI",
+      "category": "Engineering",
       "source": "./plugins/sbx-java-service"
     },
     {
       "name": "sandbox-readiness-plugin",
       "description": "Evaluate how ready a codebase is for AI development.",
+      "author": {
+        "name": "readiness-team@example.com"
+      },
       "tags": [
+        "bu:company-wide",
         "ai-readiness",
         "coding",
         "agents"
       ],
-      "category": "AI",
+      "category": "Engineering",
       "source": {
         "source": "url",
         "url": "https://github.com/diogolopesAV/aip-hub-sandbox-external",
@@ -115,12 +133,11 @@
       "name": "sandbox-brand-plugin",
       "description": "Brand guidance for AI agents working on UI, copy and diagrams.",
       "author": {
-        "name": "team-sandbox-brand-plugin@example.com",
-        "email": "team-sandbox-brand-plugin@example.com"
+        "name": "brand-team@example.com"
       },
       "tags": [
-        "brand",
-        "bu:pay-credit"
+        "bu:company-wide",
+        "brand"
       ],
       "category": "Marketing",
       "source": {

@@ -14,7 +14,7 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Engineering"
+      "category": "General"
     },
     {
       "name": "design-system",
@@ -38,7 +38,7 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Development"
+      "category": "Engineering"
     },
     {
       "name": "migration",
@@ -50,7 +50,7 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Infrastructure"
+      "category": "Engineering"
     },
     {
       "name": "bip",
@@ -62,7 +62,7 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Infrastructure"
+      "category": "Engineering"
     },
     {
       "name": "merchant-portal-collection",
@@ -86,7 +86,7 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Java, AI"
+      "category": "Engineering"
     },
     {
       "name": "sandbox-readiness-plugin",
@@ -101,7 +101,7 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "AI"
+      "category": "Engineering"
     },
     {
       "name": "sandbox-brand-plugin",

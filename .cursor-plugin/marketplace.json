@@ -12,7 +12,7 @@
       "name": "ai",
       "source": "plugins/ai",
       "description": "Common useful AI skills bundle.",
-      "category": "Engineering",
+      "category": "General",
       "keywords": [
         "bu:company-wide",
         "ai",
@@ -25,8 +25,8 @@
       "description": "Frontend accessibility and styling guidelines.",
       "category": "Product / Planning",
       "keywords": [
-        "bu:collection",
-        "bu:pay-credit",
+        "bu:payments",
+        "bu:collections",
         "frontend",
         "css",
         "web accessibility"
@@ -36,8 +36,9 @@
       "name": "development",
       "source": "plugins/development",
       "description": "Compliant development guidelines.",
-      "category": "Development",
+      "category": "Engineering",
       "keywords": [
+        "bu:company-wide",
         "dev"
       ]
     },
@@ -45,8 +46,9 @@
       "name": "migration",
       "source": "plugins/migration",
       "description": "Infrastructure migration guidelines.",
-      "category": "Infrastructure",
+      "category": "Engineering",
       "keywords": [
+        "bu:payments",
         "terraform",
         "iac"
       ]
@@ -55,8 +57,10 @@
       "name": "bip",
       "source": "plugins/bip",
       "description": "Coding standards skills.",
-      "category": "Infrastructure",
+      "category": "Engineering",
       "keywords": [
+        "bu:payments",
+        "bu:risk",
         "bip",
         "python",
         "terraform",
@@ -70,7 +74,7 @@
       "description": "Portal skills collection (phase 1 scaffold).",
       "category": "Sales / Account",
       "keywords": [
-        "bu:pay-credit",
+        "bu:payments",
         "portal",
         "skills"
       ]
@@ -79,8 +83,9 @@
       "name": "sbx-java-service",
       "source": "plugins/sbx-java-service",
       "description": "A collection of skills for developing a Java service.",
-      "category": "Java, AI",
+      "category": "Engineering",
       "keywords": [
+        "bu:collections",
         "java",
         "testing"
       ]
@@ -93,8 +98,9 @@
         "ref": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca"
       },
       "description": "Evaluate how ready a codebase is for AI development.",
-      "category": "AI",
+      "category": "Engineering",
       "keywords": [
+        "bu:company-wide",
         "ai-readiness",
         "coding",
         "agents"
@@ -111,8 +117,8 @@
       "description": "Brand guidance for AI agents working on UI, copy and diagrams.",
       "category": "Marketing",
       "keywords": [
-        "brand",
-        "bu:pay-credit"
+        "bu:company-wide",
+        "brand"
       ]
     }
   ]
