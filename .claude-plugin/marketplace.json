@@ -8,22 +8,33 @@
     {
       "name": "ai",
       "description": "Common useful AI skills bundle.",
+      "author": {
+        "name": "team-ai@example.com",
+        "email": "team-ai@example.com"
+      },
       "tags": [
+        "bu:company-wide",
         "ai",
         "skills"
       ],
-      "category": "AI",
+      "category": "Engineering",
       "source": "./plugins/ai"
     },
     {
       "name": "design-system",
       "description": "Frontend accessibility and styling guidelines.",
+      "author": {
+        "name": "team-design-system@example.com",
+        "email": "team-design-system@example.com"
+      },
       "tags": [
+        "bu:collection",
+        "bu:pay-credit",
         "frontend",
         "css",
         "web accessibility"
       ],
-      "category": "Frontend",
+      "category": "Product / Planning",
       "source": "./plugins/design-system"
     },
     {
@@ -61,11 +72,16 @@
     {
       "name": "merchant-portal-collection",
       "description": "Portal skills collection (phase 1 scaffold).",
+      "author": {
+        "name": "team-merchant-portal-collection@example.com",
+        "email": "team-merchant-portal-collection@example.com"
+      },
       "tags": [
+        "bu:pay-credit",
         "portal",
         "skills"
       ],
-      "category": "Frontend",
+      "category": "Sales / Account",
       "source": "./plugins/merchant-portal-collection"
     },
     {
@@ -88,8 +104,8 @@
       ],
       "category": "AI",
       "source": {
-        "source": "url",
-        "url": "https://github.com/diogolopesAV/aip-hub-sandbox-external",
+        "source": "github",
+        "repo": "diogolopesAV/aip-hub-sandbox-external",
         "ref": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",
         "sha": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",
         "tag_pattern": "v{version}"
@@ -98,10 +114,18 @@
     {
       "name": "sandbox-brand-plugin",
       "description": "Brand guidance for AI agents working on UI, copy and diagrams.",
-      "category": "Design",
+      "author": {
+        "name": "team-sandbox-brand-plugin@example.com",
+        "email": "team-sandbox-brand-plugin@example.com"
+      },
+      "tags": [
+        "brand",
+        "bu:pay-credit"
+      ],
+      "category": "Marketing",
       "source": {
         "source": "git-subdir",
-        "url": "https://github.com/diogolopesAV/aip-hub-sandbox-external",
+        "url": "diogolopesAV/aip-hub-sandbox-external",
         "path": "plugins/sandbox-brand-plugin",
         "ref": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",
         "sha": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",

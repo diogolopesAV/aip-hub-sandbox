@@ -18,16 +18,25 @@ marketplace:
   packages:
     - name: ai
       source: ./plugins/ai
-      category: AI
+      category: Engineering
+      author:
+        name: team-ai@example.com
+        email: team-ai@example.com
       description: Common useful AI skills bundle.
       tags:
+        - "bu:company-wide"
         - ai
         - skills
     - name: design-system
       source: ./plugins/design-system
-      category: Frontend
+      category: Product / Planning
+      author:
+        name: team-design-system@example.com
+        email: team-design-system@example.com
       description: Frontend accessibility and styling guidelines.
       tags:
+        - "bu:collection"
+        - "bu:pay-credit"
         - frontend
         - css
         - web accessibility
@@ -56,9 +65,13 @@ marketplace:
         - skill
     - name: merchant-portal-collection
       source: ./plugins/merchant-portal-collection
-      category: Frontend
+      category: Sales / Account
+      author:
+        name: team-merchant-portal-collection@example.com
+        email: team-merchant-portal-collection@example.com
       description: Portal skills collection (phase 1 scaffold).
       tags:
+        - "bu:pay-credit"
         - portal
         - skills
     - name: sbx-java-service
@@ -81,7 +94,13 @@ marketplace:
       source: diogolopesAV/aip-hub-sandbox-external
       subdir: plugins/sandbox-brand-plugin
       ref: 90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca
-      category: Design
+      category: Marketing
+      author:
+        name: team-sandbox-brand-plugin@example.com
+        email: team-sandbox-brand-plugin@example.com
+      tags:
+        - brand
+        - "bu:pay-credit"
       description: Brand guidance for AI agents working on UI, copy and diagrams.
 dependencies:
   apm:
