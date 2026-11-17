@@ -1,0 +1,112 @@
+{
+  "name": "sbx-hub",
+  "owner": {
+    "name": "Sandbox Platform Team",
+    "url": "https://github.com/diogolopesAV"
+  },
+  "plugins": [
+    {
+      "name": "ai",
+      "description": "Common useful AI skills bundle.",
+      "tags": [
+        "ai",
+        "skills"
+      ],
+      "category": "AI",
+      "source": "./plugins/ai"
+    },
+    {
+      "name": "design-system",
+      "description": "Frontend accessibility and styling guidelines.",
+      "tags": [
+        "frontend",
+        "css",
+        "web accessibility"
+      ],
+      "category": "Frontend",
+      "source": "./plugins/design-system"
+    },
+    {
+      "name": "development",
+      "description": "Compliant development guidelines.",
+      "tags": [
+        "dev"
+      ],
+      "category": "Development",
+      "source": "./plugins/development"
+    },
+    {
+      "name": "migration",
+      "description": "Infrastructure migration guidelines.",
+      "tags": [
+        "terraform",
+        "iac"
+      ],
+      "category": "Infrastructure",
+      "source": "./plugins/migration"
+    },
+    {
+      "name": "bip",
+      "description": "Coding standards skills.",
+      "tags": [
+        "bip",
+        "python",
+        "terraform",
+        "iac",
+        "skill"
+      ],
+      "category": "Infrastructure",
+      "source": "./plugins/bip"
+    },
+    {
+      "name": "merchant-portal-collection",
+      "description": "Portal skills collection (phase 1 scaffold).",
+      "tags": [
+        "portal",
+        "skills"
+      ],
+      "category": "Frontend",
+      "source": "./plugins/merchant-portal-collection"
+    },
+    {
+      "name": "sbx-java-service",
+      "description": "A collection of skills for developing a Java service.",
+      "tags": [
+        "java",
+        "testing"
+      ],
+      "category": "Java, AI",
+      "source": "./plugins/sbx-java-service"
+    },
+    {
+      "name": "sandbox-readiness-plugin",
+      "description": "Evaluate how ready a codebase is for AI development.",
+      "tags": [
+        "ai-readiness",
+        "coding",
+        "agents"
+      ],
+      "category": "AI",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/diogolopesAV/aip-hub-sandbox-external",
+        "ref": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",
+        "sha": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",
+        "tag_pattern": "v{version}"
+      }
+    },
+    {
+      "name": "sandbox-brand-plugin",
+      "description": "Brand guidance for AI agents working on UI, copy and diagrams.",
+      "category": "Design",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/diogolopesAV/aip-hub-sandbox-external",
+        "path": "plugins/sandbox-brand-plugin",
+        "ref": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",
+        "sha": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",
+        "tag_pattern": "v{version}"
+      }
+    }
+  ]
+}

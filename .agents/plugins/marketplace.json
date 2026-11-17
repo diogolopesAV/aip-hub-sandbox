@@ -1,0 +1,123 @@
+{
+  "name": "sbx-hub",
+  "interface": {
+    "displayName": "sbx-hub"
+  },
+  "plugins": [
+    {
+      "name": "ai",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ai"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "AI"
+    },
+    {
+      "name": "design-system",
+      "source": {
+        "source": "local",
+        "path": "./plugins/design-system"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Frontend"
+    },
+    {
+      "name": "development",
+      "source": {
+        "source": "local",
+        "path": "./plugins/development"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
+    },
+    {
+      "name": "migration",
+      "source": {
+        "source": "local",
+        "path": "./plugins/migration"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Infrastructure"
+    },
+    {
+      "name": "bip",
+      "source": {
+        "source": "local",
+        "path": "./plugins/bip"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Infrastructure"
+    },
+    {
+      "name": "merchant-portal-collection",
+      "source": {
+        "source": "local",
+        "path": "./plugins/merchant-portal-collection"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Frontend"
+    },
+    {
+      "name": "sbx-java-service",
+      "source": {
+        "source": "local",
+        "path": "./plugins/sbx-java-service"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Java, AI"
+    },
+    {
+      "name": "sandbox-readiness-plugin",
+      "source": {
+        "source": "url",
+        "url": "diogolopesAV/aip-hub-sandbox-external",
+        "ref": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",
+        "sha": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",
+        "tag_pattern": "v{version}"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "AI"
+    },
+    {
+      "name": "sandbox-brand-plugin",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/diogolopesAV/aip-hub-sandbox-external",
+        "path": "plugins/sandbox-brand-plugin",
+        "ref": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",
+        "sha": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",
+        "tag_pattern": "v{version}"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Design"
+    }
+  ]
+}

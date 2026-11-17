@@ -1,0 +1,6 @@
+{
+  "name": "aip-hub-sandbox",
+  "version": "1.0.0",
+  "description": "Sandbox AI package hub mirroring the structure of a real catalog (synthetic content)",
+  "license": "MIT"
+}

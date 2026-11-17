@@ -1,0 +1,111 @@
+{
+  "name": "sbx-hub",
+  "metadata": {
+    "description": "Sandbox AI package hub mirroring the structure of a real catalog (synthetic content)",
+    "version": "1.0.0"
+  },
+  "owner": {
+    "name": "Sandbox Platform Team"
+  },
+  "plugins": [
+    {
+      "name": "ai",
+      "source": "plugins/ai",
+      "description": "Common useful AI skills bundle.",
+      "category": "AI",
+      "keywords": [
+        "ai",
+        "skills"
+      ]
+    },
+    {
+      "name": "design-system",
+      "source": "plugins/design-system",
+      "description": "Frontend accessibility and styling guidelines.",
+      "category": "Frontend",
+      "keywords": [
+        "frontend",
+        "css",
+        "web accessibility"
+      ]
+    },
+    {
+      "name": "development",
+      "source": "plugins/development",
+      "description": "Compliant development guidelines.",
+      "category": "Development",
+      "keywords": [
+        "dev"
+      ]
+    },
+    {
+      "name": "migration",
+      "source": "plugins/migration",
+      "description": "Infrastructure migration guidelines.",
+      "category": "Infrastructure",
+      "keywords": [
+        "terraform",
+        "iac"
+      ]
+    },
+    {
+      "name": "bip",
+      "source": "plugins/bip",
+      "description": "Coding standards skills.",
+      "category": "Infrastructure",
+      "keywords": [
+        "bip",
+        "python",
+        "terraform",
+        "iac",
+        "skill"
+      ]
+    },
+    {
+      "name": "merchant-portal-collection",
+      "source": "plugins/merchant-portal-collection",
+      "description": "Portal skills collection (phase 1 scaffold).",
+      "category": "Frontend",
+      "keywords": [
+        "portal",
+        "skills"
+      ]
+    },
+    {
+      "name": "sbx-java-service",
+      "source": "plugins/sbx-java-service",
+      "description": "A collection of skills for developing a Java service.",
+      "category": "Java, AI",
+      "keywords": [
+        "java",
+        "testing"
+      ]
+    },
+    {
+      "name": "sandbox-readiness-plugin",
+      "source": {
+        "source": "github",
+        "repo": "diogolopesAV/aip-hub-sandbox-external",
+        "ref": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca"
+      },
+      "description": "Evaluate how ready a codebase is for AI development.",
+      "category": "AI",
+      "keywords": [
+        "ai-readiness",
+        "coding",
+        "agents"
+      ]
+    },
+    {
+      "name": "sandbox-brand-plugin",
+      "source": {
+        "source": "github",
+        "repo": "diogolopesAV/aip-hub-sandbox-external",
+        "path": "plugins/sandbox-brand-plugin",
+        "ref": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca"
+      },
+      "description": "Brand guidance for AI agents working on UI, copy and diagrams.",
+      "category": "Design"
+    }
+  ]
+}
