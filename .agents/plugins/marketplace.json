@@ -107,7 +107,7 @@
       "name": "sandbox-brand-plugin",
       "source": {
         "source": "git-subdir",
-        "url": "diogolopesAV/aip-hub-sandbox-external",
+        "url": "https://github.com/diogolopesAV/aip-hub-sandbox-external",
         "path": "plugins/sandbox-brand-plugin",
         "ref": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",
         "sha": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca",

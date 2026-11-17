@@ -12,8 +12,9 @@
       "name": "ai",
       "source": "plugins/ai",
       "description": "Common useful AI skills bundle.",
-      "category": "AI",
+      "category": "Engineering",
       "keywords": [
+        "bu:company-wide",
         "ai",
         "skills"
       ]
@@ -22,8 +23,10 @@
       "name": "design-system",
       "source": "plugins/design-system",
       "description": "Frontend accessibility and styling guidelines.",
-      "category": "Frontend",
+      "category": "Product / Planning",
       "keywords": [
+        "bu:collection",
+        "bu:pay-credit",
         "frontend",
         "css",
         "web accessibility"
@@ -65,8 +68,9 @@
       "name": "merchant-portal-collection",
       "source": "plugins/merchant-portal-collection",
       "description": "Portal skills collection (phase 1 scaffold).",
-      "category": "Frontend",
+      "category": "Sales / Account",
       "keywords": [
+        "bu:pay-credit",
         "portal",
         "skills"
       ]
@@ -105,7 +109,11 @@
         "ref": "90ea74d7bdab70fdb71a6d17b1975c2f87dc66ca"
       },
       "description": "Brand guidance for AI agents working on UI, copy and diagrams.",
-      "category": "Design"
+      "category": "Marketing",
+      "keywords": [
+        "brand",
+        "bu:pay-credit"
+      ]
     }
   ]
 }
